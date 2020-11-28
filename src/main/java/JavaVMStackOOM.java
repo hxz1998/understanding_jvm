@@ -8,6 +8,7 @@
  * 可能会造成系统假死或者其他异常（甚至强制重启才可以使用）。
  * <p>
  * VM Args: -Xss2m
+ * -Xss: 减少栈内存容量
  * 使用线程来制造内存溢出异常
  */
 public class JavaVMStackOOM {
@@ -24,11 +25,6 @@ public class JavaVMStackOOM {
                 }
             });
             thread.start();
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
     }
 

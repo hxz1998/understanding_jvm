@@ -14,18 +14,18 @@ import java.util.Set;
 public class RuntimeConstantPoolOOM {
 
     public static void main(String[] args) {
-        /*Set<String> set = new HashSet<String>();
+        Set<String> set = new HashSet<String>();
         short i = 0;
         while (true) {
             set.add(String.valueOf(i++).intern());
-        }*/
+        }
 
         // 测试 String.intern() 返回引用
         // 在JDK7之后，创建的String都是在堆上
-        String str1 = new StringBuilder().append("计算机").append("软件").toString();
+        /*String str1 = new StringBuilder().append("计算机").append("软件").toString();
         System.out.println(str1 == str1.intern());  // true，自己创建的当然能捕捉到
 
         String str2 = new StringBuilder().append("Ja").append("va").toString();
-        System.out.println(str2 == str2.intern());  // false，并不是自己创建的 Java
+        System.out.println(str2 == str2.intern());  // false，并不是自己创建的 Java*/
     }
 }
